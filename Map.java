@@ -213,3 +213,39 @@ public class Map {
         return HEIGHT;
     }
 }
+
+/*
+//A* Search Algorithm
+1. Initialize the open list
+2. Initialize the closed list
+	Put the starting node on the open list (leave its sum at zero)
+3. while the open list is not empty
+	a) find the node with the least sum on the open list, call it "q"
+	b) pop q off open list
+	c) generate q's 8 successors and set their parents to q
+	d) for each successor
+		i) if successor is the goal, stop search
+		ii) else, compute both g and h for successor
+			successor.g = q.g + distance btwn successor and q
+			successor.h = distance from goal to successor
+		successor.sum = successor.g + successor.h
+		
+		iii) if a node with the same position as successor is in the OPEN
+			list which has a lower sum than successor, skip this successor
+		iv) if a node with the same position as successor is in the CLOSED
+			list which has a lower sum than successor, skip this successor
+			otherwise, add the node to the open list
+			
+			end(for loop)
+	e)push q on the closed list
+		
+		end (while loop)
+
+//LIST OF METHODS NEEDED
+1. compute g cost
+2. compute h cost
+3. get parent
+4. generate 8 adjacent cells
+5. add to open list
+6. add to closed list
+*/
